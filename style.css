@@ -12,9 +12,12 @@
 h1{
     font-family: Calculator, 'sans-serif';
     font-size: 70px;
+    margin-bottom: 120px;
+    color: #fdfdfd;
 }
 body{
-    background-color: #7f5858;
+    background-image: url('./images/back-green.jpg');
+    background-size: cover;
     width: 100vw;
     height: 100vh;
 }
@@ -32,7 +35,7 @@ body{
 }
 .display{
     height: 160px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(10, 10, 10);
     position: relative;
     font-family: Calculator, 'sans-serif';
     display: flex;
@@ -47,9 +50,9 @@ body{
     margin: 0 auto;
     width: 400px;
     background-color: #264928d8;
-    height: 40px;
+    height: 70px;
     color: #dfdfdf;
-    font-size: 40px;
+    font-size: 65px;
     border: 9px solid gray;
     border-radius: 10px;
     
@@ -61,6 +64,7 @@ flex-wrap: wrap;
 justify-content: center;
 padding: 10px;
 
+
 }
 
 .number{
@@ -71,6 +75,7 @@ padding: 10px;
     font-size: 40px;
     flex-grow: 1;
     margin: 1px;
+    color: #fdfdfd;
 }
 
 .operator, .equal, .reset{
