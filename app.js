@@ -32,7 +32,7 @@ operator.forEach((el) =>{
 reset.addEventListener('click', () => {
     firstNum = '';
     secondNum = '';
-    out.textContent = ''
+    out.textContent = 0
     flag = false;
     console.log(`firstNum : ${firstNum}`,  `secondNum : ${secondNum}`)
 })
