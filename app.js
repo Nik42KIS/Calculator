@@ -5,15 +5,18 @@ const equal = document.querySelector('.equal')
 const digit = document.querySelectorAll('.number');
 const operator = document.querySelectorAll('.operator');
 const reset = document.querySelector('.reset')
+const out = document.querySelector('.display__out')
 let flag = false;
 
 digit.forEach((el) => {
   el.addEventListener('click', () => {
     if (flag) {
-      secondNum += el.textContent;
+        secondNum += el.textContent;
+        out.textContent += el.textContent;
       console.log(firstNum, secondNum);
     } else {
       firstNum += el.textContent;
+      out.textContent = firstNum
       console.log(firstNum, secondNum);
     }
   });
@@ -21,6 +24,7 @@ digit.forEach((el) => {
 operator.forEach((el) =>{
     el.addEventListener('click', () =>{
         curSign = el.textContent
+        out.textContent += el.textContent
         flag = true
     })
 })
@@ -28,13 +32,16 @@ operator.forEach((el) =>{
 reset.addEventListener('click', () => {
     firstNum = '';
     secondNum = '';
+    out.textContent = ''
+    flag = false;
     console.log(`firstNum : ${firstNum}`,  `secondNum : ${secondNum}`)
 })
 
 function operate(oneN, twoN, sign) {
     let result = 0;
     let first = Number(oneN);
-    let second = Number(twoN)
+    let second = Number(twoN);
+    
     switch(sign){
         case '/': 
             result = first / second;
@@ -56,5 +63,7 @@ function operate(oneN, twoN, sign) {
 
 equal.addEventListener('click', () =>{
     firstNum = operate(firstNum, secondNum, curSign)
+    out.textContent = firstNum;
+    secondNum = ''
     console.log(firstNum)
 })

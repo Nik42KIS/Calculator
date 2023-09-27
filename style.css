@@ -13,6 +13,14 @@ body{
     height: 200px;
     background-color: rgb(14, 66, 26);
 }
+
+.display__out{
+    background-color: #2e2323;
+    height: 40px;
+    color: #dfdfdf;
+    font-size: 30px;
+}
+
 button{
     width: 90px;
     height: 90px;
