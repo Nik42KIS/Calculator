@@ -60,6 +60,6 @@ function operate(oneN, twoN, sign) {
 
 equal.addEventListener('click', () => {
   firstNum = operate(firstNum, secondNum, curSign);
-  out.textContent = firstNum;
+  out.textContent =  firstNum.toFixed(2);
   secondNum = '';
 });
